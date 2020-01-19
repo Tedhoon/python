@@ -8,7 +8,7 @@ class Car():
         
     def __str__(self):
         return f"이 차는 {self.name}차 입니다!"
-
+    
 
 class Convertible(Car):
     def __init__(self , **kwargs):
