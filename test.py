@@ -1,24 +1,27 @@
-def calc_square(digit):
-    return digit * digit
+def mark_bold(function):
+    def wrapper(string):
+        return '<b>' + function(string) + '</b>'
+    return wrapper
 
-def calc_plus(digit):
-    return digit + digit
-
-def calc_quad(digit):
-    return digit * digit * digit * digit
-
-
-
-def list_square(function, digit_list):
-    result = list()
-    for digit in digit_list:
-        result.append(function(digit))
-    print(result)
-        
+def mark_italic(function):
+    def wrapper(string):
+        return '<i>' + function(string) + '</i>'
+    return wrapper
 
 
-num_list = [1, 2, 3, 4, 5]
+@mark_bold
+def contents(string):
+    return string
 
-list_square(calc_square, num_list)
-list_square(calc_plus, num_list)
-list_square(calc_quad, num_list)
+@mark_italic
+def contents2(string):
+    return string
+
+@mark_bold
+@mark_italic
+def contents3(string):
+    return string
+
+print (contents('안녕'))
+print (contents2('안녕'))
+print (contents3('안녕'))
