@@ -35,3 +35,19 @@ for i in range(5,89):
     
     print(f"({num+5}, 0 , {mylist[num]}, '2020-03-31 07:46:26.622585+00','2020-03-31 07:46:26.622585+00'),")
     num+=1
+
+
+
+
+    
+from django.db.models import Q
+
+def produ~
+    '''
+    생략
+    '''
+    if category_slug:
+        current~... 
+        products = Product.objects.filter(
+            Q(available_display=True) & Q(category=current_category))
+    
