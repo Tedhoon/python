@@ -30,7 +30,7 @@ def check_lion(is_com):
 if __name__ == '__main__':
     print("사람입력하셈")
     print("끝 << 치면 끝남")
-    while True:
+    while lion_works:
         is_com = input()
         if is_com == "끝":
             break;
