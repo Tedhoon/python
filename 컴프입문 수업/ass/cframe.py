@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 
-class Frame():
+class MyFabulousFrame():
 
     def __init__(self):
         self.op = ''  
@@ -14,7 +14,7 @@ class Frame():
 
         self.entry_value = StringVar(self.root, value='')
 
-        self.num_entry = ttk.Entry(self.root, textvariable = self.entry_value, width=20)
+        self.num_entry = ttk.Entry(self.root, justify='right' ,textvariable = self.entry_value, width=20)
         self.button7 = ttk.Button(self.root, text="7", command = lambda:self.press('7'))
         self.button8 = ttk.Button(self.root, text="8", command = lambda:self.press('8'))
         self.button9 = ttk.Button(self.root, text="9", command = lambda:self.press('9'))
@@ -87,7 +87,7 @@ class Frame():
             print(solution)
 
 
-class Calculator(Frame):
+class Calculator(MyFabulousFrame):
 
     def __init__(self):
         super().__init__()
